@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ClimaGuard | IRTRA Petapa</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8f5;
+      color: #17324d;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d3553, #167c80);
+      color: white;
+      padding: 70px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "☁";
+      position: absolute;
+      font-size: 180px;
+      opacity: 0.08;
+      left: 5%;
+      top: 10px;
+    }
+
+    header::after {
+      content: "☀";
+      position: absolute;
+      font-size: 150px;
+      opacity: 0.08;
+      right: 5%;
+      bottom: -30px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f4c542;
+      color: #17324d;
+      padding: 7px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    header h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: -3px;
+      margin-bottom: 8px;
+    }
+
+    header h2 {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-weight: normal;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 22px auto 0;
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+
+    main {
+      width: min(1100px, 92%);
+      margin: 45px auto;
+    }
+
+    section {
+      background: white;
+      border-radius: 22px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 25px rgba(23, 50, 77, 0.08);
+    }
+
+    section h2 {
+      color: #126f76;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    section h3 {
+      margin-bottom: 8px;
+      color: #17324d;
+    }
+
+    .intro {
+      border-left: 7px solid #f4c542;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      align-items: stretch;
+      margin-top: 25px;
+    }
+
+    .step {
+      background: #eef7f5;
+      border-radius: 18px;
+      padding: 20px 12px;
+      text-align: center;
+      position: relative;
+    }
+
+    .step .icon {
+      font-size: 2.4rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .member {
+      border-radius: 20px;
+      padding: 25px;
+      background: #f4f7fb;
+      border-top: 6px solid #167c80;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #dcefee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .role {
+      color: #167c80;
+      font-weight: bold;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .ods {
+      background: linear-gradient(135deg, #fff8df, #f3f8e9);
+      border: 2px solid #e6d27a;
+    }
+
+    .ods-number {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #e09f17;
+      float: left;
+      margin-right: 20px;
+      line-height: 1;
+    }
+
+    .status {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .status-box {
+      padding: 22px;
+      border-radius: 18px;
+    }
+
+    .working {
+      background: #e8f6e9;
+      border-left: 6px solid #42a85f;
+    }
+
+    .pending {
+      background: #fff5dc;
+      border-left: 6px solid #e6a928;
+    }
+
+    .placeholder {
+      min-height: 190px;
+      border: 3px dashed #a7b8c5;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #718494;
+      padding: 25px;
+      background: #f8fafb;
+      margin-top: 20px;
+    }
+
+    .resources {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .resource {
+      padding: 25px;
+      border-radius: 20px;
+      background: #17324d;
+      color: white;
+    }
+
+    .resource h3 {
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 11px 18px;
+      border-radius: 10px;
+      background: #f4c542;
+      color: #17324d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .materials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .material {
+      padding: 18px;
+      background: #eef7f5;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    footer {
+      background: #0d3553;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 50px;
+    }
+
+    footer strong {
+      color: #f4c542;
+    }
+
+    @media (max-width: 800px) {
+      .flow,
+      .team,
+      .status,
+      .resources,
+      .materials {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 25px;
+      }
+
+      header {
+        padding: 55px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <span class="tag">PROYECTO STEAM · IRTRA PETAPA</span>
+
+    <h1>ClimaGuard</h1>
+
+    <h2>Sistema de alerta preventiva por baja iluminación</h2>
+
+    <p>
+      Una propuesta tecnológica para detectar períodos de baja iluminación
+      y proporcionar una señal de alerta al personal.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- PROBLEMA -->
+    <section class="intro">
+      <h2>⚠️ El reto</h2>
+
+      <p>
+        En un espacio recreativo pueden presentarse cambios en las condiciones
+        ambientales que reduzcan considerablemente la iluminación.
+        ClimaGuard busca proporcionar una alerta al personal cuando se detecta
+        poca luz durante un determinado período de tiempo.
+      </p>
+    </section>
+
+
+    <!-- SOLUCIÓN -->
+    <section>
+      <h2>💡 Nuestra solución</h2>
+
+      <p>
+        ClimaGuard es un sistema que detecta cuando el nivel de luz permanece
+        bajo durante cierto tiempo. Al cumplirse esta condición, se activa una
+        luz de alerta en el tablero y el sistema está diseñado para generar
+        también una señal sonora.
+      </p>
+
+      <div class="flow">
+
+        <div class="step">
+          <span class="icon">☀️</span>
+          <strong>Luz normal</strong>
+          <small>Condiciones habituales</small>
+        </div>
+
+        <div class="step">
+          <span class="icon">🌥️</span>
+          <strong>Poca luz</strong>
+          <small>Disminuye la iluminación</small>
+        </div>
+
+        <div class="step">
+          <span class="icon">🔎</span>
+          <strong>Detección</strong>
+          <small>El sistema detecta la condición</small>
+        </div>
+
+        <div class="step">
+          <span class="icon">💡</span>
+          <strong>Alerta visual</strong>
+          <small>Se enciende la luz</small>
+        </div>
+
+        <div class="step">
+          <span class="icon">🔊</span>
+          <strong>Alerta sonora</strong>
+          <small>En desarrollo</small>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EQUIPO -->
+    <section>
+      <h2>👥 Nuestro equipo</h2>
+
+      <div class="team">
+
+        <div class="member">
+          <div class="avatar">👩🏻‍💻</div>
+          <h3>Sara Andrade</h3>
+          <p class="role">
+            Prompt Engineering · Documento · Infografía
+          </p>
+        </div>
+
+        <div class="member">
+          <div class="avatar">👩🏼‍💻</div>
+          <h3>Cécile Durand</h3>
+          <p class="role">
+            Organización del podcast · Documento
+          </p>
+        </div>
+
+        <div class="member">
+          <div class="avatar">👨🏽‍💻</div>
+          <h3>Victor Mazariegos</h3>
+          <p class="role">
+            Circuito · ODS
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FUNCIONAMIENTO -->
+    <section>
+      <h2>⚙️ ¿Cómo funciona?</h2>
+
+      <ol>
+        <li>El sistema detecta el nivel de iluminación.</li>
+        <li>Comprueba que la condición de poca luz permanezca durante un tiempo determinado.</li>
+        <li>Se activa la luz de alerta en el tablero.</li>
+        <li>La alerta sonora se encuentra en proceso de implementación.</li>
+        <li>El aviso permite al personal estar atento y tomar las precauciones correspondientes.</li>
+      </ol>
+    </section>
+
+
+    <!-- ESTADO -->
+    <section>
+      <h2>🟡 Estado del sistema</h2>
+
+      <p>
+        <strong>FUNCIONAMIENTO PARCIAL</strong>
+      </p>
+
+      <div class="status">
+
+        <div class="status-box working">
+          <h3>✓ Funcionando</h3>
+          <p>
+            Detección de baja iluminación y activación de la luz de alerta.
+          </p>
+        </div>
+
+        <div class="status-box pending">
+          <h3>⏳ En desarrollo</h3>
+          <p>
+            Generación del sonido de alerta.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ODS -->
+    <section class="ods">
+      <h2>🌎 ODS impactado</h2>
+
+      <div class="ods-number">11</div>
+
+      <h3>Ciudades y comunidades sostenibles</h3>
+
+      <p>
+        Nuestro proyecto busca contribuir a un espacio recreativo más preparado
+        ante cambios en las condiciones ambientales mediante una herramienta
+        tecnológica que proporciona una alerta visual y, posteriormente,
+        sonora al personal.
+      </p>
+
+      <div style="clear: both;"></div>
+    </section>
+
+
+    <!-- MATERIALES -->
+    <section>
+      <h2>🔧 Materiales técnicos</h2>
+
+      <p>
+        Los componentes serán agregados después de verificar el circuito
+        desarrollado en Tinkercad.
+      </p>
+
+      <div class="materials">
+
+        <div class="material">
+          🔧<br>
+          <strong>[COMPONENTE 1]</strong>
+        </div>
+
+        <div class="material">
+          ⚡<br>
+          <strong>[COMPONENTE 2]</strong>
+        </div>
+
+        <div class="material">
+          💡<br>
+          <strong>[COMPONENTE 3]</strong>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TINKERCAD -->
+    <section>
+      <h2>🖥️ Prototipo</h2>
+
+      <p>
+        Circuito desarrollado y simulado en Tinkercad.
+      </p>
+
+      <div class="placeholder">
+        <strong>
+          [ESPACIO PARA LA CAPTURA DEL CIRCUITO DE TINKERCAD]
+        </strong>
+      </div>
+    </section>
+
+
+    <!-- RECURSOS -->
+    <section>
+      <h2>📚 Recursos del proyecto</h2>
+
+      <div class="resources">
+
+        <div class="resource">
+          <h3>💻 GitHub</h3>
+          <p>
+            Código, investigación y archivos relacionados con el proyecto.
+          </p>
+
+          <a href="#" class="button">
+            Enlace pendiente
+          </a>
+        </div>
+
+        <div class="resource">
+          <h3>🎙️ Podcast</h3>
+          <p>
+            Presentación y explicación del proyecto.
+          </p>
+
+          <a href="#" class="button">
+            Enlace pendiente
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>
+      <strong>ClimaGuard</strong> · Proyecto STEAM · IRTRA Petapa
+    </p>
+
+    <p>
+      Andrade · Durand · Mazariegos
+    </p>
+  </footer>
+
+</body>
+</html>
