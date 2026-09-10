@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>ClimaGuard | IRTRA Petapa</title>
+
 
   <style>
 
@@ -14,12 +18,18 @@
       padding: 0;
     }
 
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f4f8f5;
       color: #17324d;
       line-height: 1.6;
     }
+
+
+    /* =========================
+       ENCABEZADO
+    ========================= */
 
     header {
       background: linear-gradient(135deg, #0d3553, #167c80);
@@ -30,6 +40,7 @@
       overflow: hidden;
     }
 
+
     header::before {
       content: "☁";
       position: absolute;
@@ -39,6 +50,7 @@
       top: 10px;
     }
 
+
     header::after {
       content: "☀";
       position: absolute;
@@ -47,6 +59,7 @@
       right: 5%;
       bottom: -30px;
     }
+
 
     .tag {
       display: inline-block;
@@ -58,11 +71,13 @@
       margin-bottom: 18px;
     }
 
+
     header h1 {
       font-size: clamp(3rem, 8vw, 6rem);
       letter-spacing: -3px;
       margin-bottom: 8px;
     }
+
 
     header h2 {
       font-size: clamp(1.2rem, 3vw, 2rem);
@@ -71,6 +86,7 @@
       margin: auto;
     }
 
+
     header p {
       max-width: 650px;
       margin: 22px auto 0;
@@ -78,10 +94,16 @@
       font-size: 1.05rem;
     }
 
+
+    /* =========================
+       CONTENIDO
+    ========================= */
+
     main {
       width: min(1100px, 92%);
       margin: 45px auto;
     }
+
 
     section {
       background: white;
@@ -91,20 +113,28 @@
       box-shadow: 0 8px 25px rgba(23, 50, 77, 0.08);
     }
 
+
     section h2 {
       color: #126f76;
       margin-bottom: 15px;
       font-size: 2rem;
     }
 
+
     section h3 {
       margin-bottom: 8px;
       color: #17324d;
     }
 
+
     .intro {
       border-left: 7px solid #f4c542;
     }
+
+
+    /* =========================
+       FLUJO DEL SISTEMA
+    ========================= */
 
     .flow {
       display: grid;
@@ -114,6 +144,7 @@
       margin-top: 25px;
     }
 
+
     .step {
       background: #eef7f5;
       border-radius: 18px;
@@ -122,16 +153,23 @@
       position: relative;
     }
 
+
     .step .icon {
       font-size: 2.4rem;
       display: block;
       margin-bottom: 8px;
     }
 
+
     .step strong {
       display: block;
       margin-bottom: 5px;
     }
+
+
+    /* =========================
+       EQUIPO
+    ========================= */
 
     .team {
       display: grid;
@@ -140,12 +178,14 @@
       margin-top: 25px;
     }
 
+
     .member {
       border-radius: 20px;
       padding: 25px;
       background: #f4f7fb;
       border-top: 6px solid #167c80;
     }
+
 
     .avatar {
       width: 80px;
@@ -159,6 +199,7 @@
       margin-bottom: 15px;
     }
 
+
     .role {
       color: #167c80;
       font-weight: bold;
@@ -166,10 +207,16 @@
       font-size: 0.95rem;
     }
 
+
+    /* =========================
+       ODS
+    ========================= */
+
     .ods {
       background: linear-gradient(135deg, #fff8df, #f3f8e9);
       border: 2px solid #e6d27a;
     }
+
 
     .ods-number {
       font-size: 4rem;
@@ -180,6 +227,11 @@
       line-height: 1;
     }
 
+
+    /* =========================
+       ESTADO
+    ========================= */
+
     .status {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -187,36 +239,67 @@
       margin-top: 20px;
     }
 
+
     .status-box {
       padding: 22px;
       border-radius: 18px;
     }
+
 
     .working {
       background: #e8f6e9;
       border-left: 6px solid #42a85f;
     }
 
+
     .pending {
       background: #fff5dc;
       border-left: 6px solid #e6a928;
     }
 
-    .placeholder {
-      min-height: 190px;
-      border: 3px dashed #a7b8c5;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #718494;
-      padding: 25px;
-      background: #f8fafb;
-      margin-top: 20px;
+
+    /* =========================
+       MATERIALES
+    ========================= */
+
+    .materials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 25px;
     }
 
-    /* VIDEO DEL CIRCUITO */
+
+    .material {
+      padding: 20px;
+      background: #eef7f5;
+      border-radius: 14px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+
+    .material:hover {
+      transform: translateY(-4px);
+    }
+
+
+    .material-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+
+    .material-name {
+      font-weight: bold;
+      color: #17324d;
+    }
+
+
+    /* =========================
+       VIDEO
+    ========================= */
 
     .video-container {
       margin-top: 25px;
@@ -227,13 +310,16 @@
       text-align: center;
     }
 
+
     .video-container video {
       width: 100%;
-      max-width: 900px;
+      max-width: 950px;
       border-radius: 12px;
       display: block;
       margin: auto;
+      background: #000;
     }
+
 
     .video-caption {
       margin-top: 12px;
@@ -241,11 +327,27 @@
       font-size: 0.95rem;
     }
 
+
+    .video-note {
+      margin-top: 18px;
+      padding: 14px;
+      background: #eef7f5;
+      border-radius: 12px;
+      color: #17324d;
+      font-size: 0.95rem;
+    }
+
+
+    /* =========================
+       RECURSOS
+    ========================= */
+
     .resources {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
+
 
     .resource {
       padding: 25px;
@@ -254,10 +356,12 @@
       color: white;
     }
 
+
     .resource h3 {
       color: white;
       font-size: 1.4rem;
     }
+
 
     .button {
       display: inline-block;
@@ -270,23 +374,15 @@
       font-weight: bold;
     }
 
+
     .button:hover {
       opacity: 0.85;
     }
 
-    .materials {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 20px;
-    }
 
-    .material {
-      padding: 18px;
-      background: #eef7f5;
-      border-radius: 14px;
-      text-align: center;
-    }
+    /* =========================
+       PIE DE PÁGINA
+    ========================= */
 
     footer {
       background: #0d3553;
@@ -296,9 +392,15 @@
       margin-top: 50px;
     }
 
+
     footer strong {
       color: #f4c542;
     }
+
+
+    /* =========================
+       ADAPTACIÓN PARA CELULAR
+    ========================= */
 
     @media (max-width: 800px) {
 
@@ -310,9 +412,11 @@
         grid-template-columns: 1fr;
       }
 
+
       section {
         padding: 25px;
       }
+
 
       header {
         padding: 55px 20px;
@@ -321,12 +425,16 @@
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- ENCABEZADO -->
+
+  <!-- =========================
+       ENCABEZADO
+  ========================= -->
 
   <header>
 
@@ -334,11 +442,16 @@
       PROYECTO STEAM · IRTRA PETAPA
     </span>
 
-    <h1>ClimaGuard</h1>
+
+    <h1>
+      ClimaGuard
+    </h1>
+
 
     <h2>
       Sistema de alerta preventiva por baja iluminación
     </h2>
+
 
     <p>
       Una propuesta tecnológica para detectar períodos de baja iluminación
@@ -348,14 +461,20 @@
   </header>
 
 
+
   <main>
 
 
-    <!-- PROBLEMA -->
+    <!-- =========================
+         PROBLEMA
+    ========================= -->
 
     <section class="intro">
 
-      <h2>⚠️ El reto</h2>
+      <h2>
+        ⚠️ El reto
+      </h2>
+
 
       <p>
         En un espacio recreativo pueden presentarse cambios en las condiciones
@@ -367,27 +486,38 @@
     </section>
 
 
-    <!-- SOLUCIÓN -->
+
+    <!-- =========================
+         SOLUCIÓN
+    ========================= -->
 
     <section>
 
-      <h2>💡 Nuestra solución</h2>
+      <h2>
+        💡 Nuestra solución
+      </h2>
+
 
       <p>
         ClimaGuard es un sistema que detecta cuando el nivel de luz permanece
-        bajo durante cierto tiempo. Al cumplirse esta condición, se activa una
-        luz de alerta en el tablero y el sistema está diseñado para generar
-        también una señal sonora.
+        bajo durante cierto tiempo. Al cumplirse esta condición, se activa
+        una señal visual mediante LEDs y el sistema cuenta con un buzzer
+        destinado a generar una alerta sonora.
       </p>
 
 
       <div class="flow">
 
+
         <div class="step">
 
-          <span class="icon">☀️</span>
+          <span class="icon">
+            ☀️
+          </span>
 
-          <strong>Luz normal</strong>
+          <strong>
+            Luz normal
+          </strong>
 
           <small>
             Condiciones habituales
@@ -396,11 +526,16 @@
         </div>
 
 
+
         <div class="step">
 
-          <span class="icon">🌥️</span>
+          <span class="icon">
+            🌥️
+          </span>
 
-          <strong>Poca luz</strong>
+          <strong>
+            Poca luz
+          </strong>
 
           <small>
             Disminuye la iluminación
@@ -409,54 +544,75 @@
         </div>
 
 
+
         <div class="step">
 
-          <span class="icon">🔎</span>
+          <span class="icon">
+            🔎
+          </span>
 
-          <strong>Detección</strong>
+          <strong>
+            Detección
+          </strong>
 
           <small>
-            El sistema detecta la condición
+            La LDR detecta el nivel de luz
           </small>
 
         </div>
 
 
+
         <div class="step">
 
-          <span class="icon">💡</span>
+          <span class="icon">
+            💡
+          </span>
 
-          <strong>Alerta visual</strong>
+          <strong>
+            Alerta visual
+          </strong>
 
           <small>
-            Se enciende la luz
+            Se activan los LEDs
           </small>
 
         </div>
 
 
+
         <div class="step">
 
-          <span class="icon">🔊</span>
+          <span class="icon">
+            🔊
+          </span>
 
-          <strong>Alerta sonora</strong>
+          <strong>
+            Alerta sonora
+          </strong>
 
           <small>
-            En desarrollo
+            Mediante el buzzer
           </small>
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- EQUIPO -->
+
+    <!-- =========================
+         EQUIPO
+    ========================= -->
 
     <section>
 
-      <h2>👥 Nuestro equipo</h2>
+      <h2>
+        👥 Nuestro equipo
+      </h2>
 
 
       <div class="team">
@@ -468,9 +624,11 @@
             👩🏻‍💻
           </div>
 
+
           <h3>
             Sara Andrade
           </h3>
+
 
           <p class="role">
             Prompt Engineering · Documento · Infografía
@@ -479,15 +637,18 @@
         </div>
 
 
+
         <div class="member">
 
           <div class="avatar">
             👩🏼‍💻
           </div>
 
+
           <h3>
             Cécile Durand
           </h3>
+
 
           <p class="role">
             Organización del podcast · Documento
@@ -496,15 +657,18 @@
         </div>
 
 
+
         <div class="member">
 
           <div class="avatar">
             👨🏽‍💻
           </div>
 
+
           <h3>
             Victor Mazariegos
           </h3>
+
 
           <p class="role">
             Circuito · ODS
@@ -512,38 +676,56 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
-    <!-- FUNCIONAMIENTO -->
+
+    <!-- =========================
+         FUNCIONAMIENTO
+    ========================= -->
 
     <section>
 
-      <h2>⚙️ ¿Cómo funciona?</h2>
+      <h2>
+        ⚙️ ¿Cómo funciona?
+      </h2>
 
 
       <ol>
 
         <li>
-          El sistema detecta el nivel de iluminación.
+          La <strong>LDR o fotorresistencia</strong> detecta el nivel de iluminación.
         </li>
 
-        <li>
-          Comprueba que la condición de poca luz permanezca durante un tiempo determinado.
-        </li>
 
         <li>
-          Se activa la luz de alerta en el tablero.
+          El Arduino Uno recibe la información proveniente del sensor.
         </li>
 
-        <li>
-          La alerta sonora se encuentra en proceso de implementación.
-        </li>
 
         <li>
-          El aviso permite al personal estar atento y tomar las precauciones correspondientes.
+          Cuando se presenta una condición de baja iluminación,
+          el sistema activa la señal de alerta.
+        </li>
+
+
+        <li>
+          Los <strong>LEDs</strong> funcionan como indicadores visuales
+          del estado del sistema.
+        </li>
+
+
+        <li>
+          El <strong>buzzer</strong> está destinado a proporcionar
+          una señal sonora de alerta.
+        </li>
+
+
+        <li>
+          El pulsador forma parte del circuito de control del prototipo.
         </li>
 
       </ol>
@@ -551,11 +733,17 @@
     </section>
 
 
-    <!-- ESTADO -->
+
+    <!-- =========================
+         ESTADO DEL SISTEMA
+    ========================= -->
 
     <section>
 
-      <h2>🟡 Estado del sistema</h2>
+      <h2>
+        🟡 Estado del sistema
+      </h2>
+
 
       <p>
         <strong>FUNCIONAMIENTO PARCIAL</strong>
@@ -571,11 +759,14 @@
             ✓ Funcionando
           </h3>
 
+
           <p>
-            Detección de baja iluminación y activación de la luz de alerta.
+            Detección de baja iluminación y activación
+            de la señal visual mediante LEDs.
           </p>
 
         </div>
+
 
 
         <div class="status-box pending">
@@ -584,22 +775,30 @@
             ⏳ En desarrollo
           </h3>
 
+
           <p>
-            Generación del sonido de alerta.
+            Generación y comprobación de la señal sonora
+            mediante el buzzer.
           </p>
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- ODS -->
+
+    <!-- =========================
+         ODS
+    ========================= -->
 
     <section class="ods">
 
-      <h2>🌎 ODS impactado</h2>
+      <h2>
+        🌎 ODS impactado
+      </h2>
 
 
       <div class="ods-number">
@@ -615,8 +814,7 @@
       <p>
         Nuestro proyecto busca contribuir a un espacio recreativo más preparado
         ante cambios en las condiciones ambientales mediante una herramienta
-        tecnológica que proporciona una alerta visual y, posteriormente,
-        sonora al personal.
+        tecnológica que proporciona una alerta visual y sonora al personal.
       </p>
 
 
@@ -625,16 +823,21 @@
     </section>
 
 
-    <!-- MATERIALES -->
+
+    <!-- =========================
+         MATERIALES
+    ========================= -->
 
     <section>
 
-      <h2>🔧 Materiales técnicos</h2>
+      <h2>
+        🔧 Materiales técnicos
+      </h2>
 
 
       <p>
-        Los componentes serán agregados después de verificar el circuito
-        desarrollado en Tinkercad.
+        Para la construcción y simulación del prototipo se utilizaron
+        los siguientes componentes:
       </p>
 
 
@@ -643,33 +846,125 @@
 
         <div class="material">
 
-          🔧<br>
+          <span class="material-icon">
+            🔵
+          </span>
 
-          <strong>
-            [COMPONENTE 1]
-          </strong>
-
-        </div>
-
-
-        <div class="material">
-
-          ⚡<br>
-
-          <strong>
-            [COMPONENTE 2]
-          </strong>
+          <span class="material-name">
+            Arduino Uno
+          </span>
 
         </div>
 
 
+
         <div class="material">
 
-          💡<br>
+          <span class="material-icon">
+            ▫️
+          </span>
 
-          <strong>
-            [COMPONENTE 3]
-          </strong>
+          <span class="material-name">
+            Protoboard
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            ☀️
+          </span>
+
+          <span class="material-name">
+            LDR / Fotorresistencia
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            🔴
+          </span>
+
+          <span class="material-name">
+            LED rojo 1
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            🔴
+          </span>
+
+          <span class="material-name">
+            LED rojo 2
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            ▬
+          </span>
+
+          <span class="material-name">
+            4 resistencias
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            ⚫
+          </span>
+
+          <span class="material-name">
+            Pulsador
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            🔊
+          </span>
+
+          <span class="material-name">
+            Buzzer
+          </span>
+
+        </div>
+
+
+
+        <div class="material">
+
+          <span class="material-icon">
+            🔌
+          </span>
+
+          <span class="material-name">
+            Cables de conexión
+          </span>
 
         </div>
 
@@ -679,22 +974,27 @@
     </section>
 
 
-    <!-- PROTOTIPO Y VIDEO -->
+
+    <!-- =========================
+         VIDEO DEL CIRCUITO
+    ========================= -->
 
     <section>
 
-      <h2>🖥️ Prototipo</h2>
+      <h2>
+        🖥️ Prototipo
+      </h2>
 
 
       <p>
         Circuito desarrollado y simulado en Tinkercad.
-        En el siguiente video se muestra el funcionamiento del prototipo.
+        En el siguiente video se muestra el prototipo de ClimaGuard
+        y la distribución de sus componentes.
       </p>
 
 
-      <!-- VIDEO -->
-
       <div class="video-container">
+
 
         <video controls>
 
@@ -702,6 +1002,7 @@
             src="WhatsApp Video 2026-09-09 at 9.05.26 PM.mp4"
             type="video/mp4"
           >
+
 
           Tu navegador no puede reproducir este video.
 
@@ -712,33 +1013,41 @@
           🎥 Video demostrativo del circuito ClimaGuard
         </p>
 
-      </div>
 
+        <div class="video-note">
 
-      <!-- ESPACIO PARA CAPTURA DE TINKERCAD -->
+          <strong>
+            💡 Prototipo:
+          </strong>
 
-      <div class="placeholder">
+          El circuito integra el sensor de iluminación,
+          los indicadores LED y el buzzer dentro de un sistema
+          controlado por Arduino Uno.
 
-        <strong>
-          [ESPACIO PARA LA CAPTURA DEL CIRCUITO DE TINKERCAD]
-        </strong>
+        </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- RECURSOS -->
+
+    <!-- =========================
+         RECURSOS
+    ========================= -->
 
     <section>
 
-      <h2>📚 Recursos del proyecto</h2>
+      <h2>
+        📚 Recursos del proyecto
+      </h2>
 
 
       <div class="resources">
 
 
-        <!-- GITHUB -->
+        <!-- INVESTIGACIÓN / GITHUB -->
 
         <div class="resource">
 
@@ -747,27 +1056,9 @@
           </h3>
 
 
-          <a
-            href="#"
-            class="button"
-          >
-            Enlace pendiente
-          </a>
-
-        </div>
-
-
-        <!-- PODCAST -->
-
-        <div class="resource">
-
-          <h3>
-            🎙️ Podcast
-          </h3>
-
-
           <p>
-            Presentación y explicación del proyecto.
+            Investigación y archivos relacionados
+            con el desarrollo de ClimaGuard.
           </p>
 
 
@@ -780,6 +1071,33 @@
 
         </div>
 
+
+
+        <!-- PODCAST -->
+
+        <div class="resource">
+
+          <h3>
+            🎙️ Podcast
+          </h3>
+
+
+          <p>
+            Presentación y explicación del proyecto
+            realizada por nuestro equipo.
+          </p>
+
+
+          <a
+            href="#"
+            class="button"
+          >
+            Enlace pendiente
+          </a>
+
+        </div>
+
+
       </div>
 
     </section>
@@ -788,7 +1106,10 @@
   </main>
 
 
-  <!-- PIE DE PÁGINA -->
+
+  <!-- =========================
+       PIE DE PÁGINA
+  ========================= -->
 
   <footer>
 
@@ -796,6 +1117,7 @@
       <strong>ClimaGuard</strong>
       · Proyecto STEAM · IRTRA Petapa
     </p>
+
 
     <p>
       Andrade · Durand · Mazariegos
@@ -805,8 +1127,5 @@
 
 
 </body>
-</html>
-  </footer>
 
-</body>
 </html>
