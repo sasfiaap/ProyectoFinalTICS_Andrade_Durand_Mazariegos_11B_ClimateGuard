@@ -7,6 +7,7 @@
   <title>ClimaGuard | IRTRA Petapa</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -215,6 +216,31 @@
       margin-top: 20px;
     }
 
+    /* VIDEO DEL CIRCUITO */
+
+    .video-container {
+      margin-top: 25px;
+      background: #f8fafb;
+      border-radius: 18px;
+      padding: 15px;
+      border: 3px solid #dce7ec;
+      text-align: center;
+    }
+
+    .video-container video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      display: block;
+      margin: auto;
+    }
+
+    .video-caption {
+      margin-top: 12px;
+      color: #718494;
+      font-size: 0.95rem;
+    }
+
     .resources {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -275,6 +301,7 @@
     }
 
     @media (max-width: 800px) {
+
       .flow,
       .team,
       .status,
@@ -290,29 +317,44 @@
       header {
         padding: 55px 20px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+  <!-- ENCABEZADO -->
+
   <header>
-    <span class="tag">PROYECTO STEAM · IRTRA PETAPA</span>
+
+    <span class="tag">
+      PROYECTO STEAM · IRTRA PETAPA
+    </span>
 
     <h1>ClimaGuard</h1>
 
-    <h2>Sistema de alerta preventiva por baja iluminación</h2>
+    <h2>
+      Sistema de alerta preventiva por baja iluminación
+    </h2>
 
     <p>
       Una propuesta tecnológica para detectar períodos de baja iluminación
       y proporcionar una señal de alerta al personal.
     </p>
+
   </header>
+
 
   <main>
 
+
     <!-- PROBLEMA -->
+
     <section class="intro">
+
       <h2>⚠️ El reto</h2>
 
       <p>
@@ -321,11 +363,14 @@
         ClimaGuard busca proporcionar una alerta al personal cuando se detecta
         poca luz durante un determinado período de tiempo.
       </p>
+
     </section>
 
 
     <!-- SOLUCIÓN -->
+
     <section>
+
       <h2>💡 Nuestra solución</h2>
 
       <p>
@@ -335,125 +380,237 @@
         también una señal sonora.
       </p>
 
+
       <div class="flow">
 
         <div class="step">
+
           <span class="icon">☀️</span>
+
           <strong>Luz normal</strong>
-          <small>Condiciones habituales</small>
+
+          <small>
+            Condiciones habituales
+          </small>
+
         </div>
 
+
         <div class="step">
+
           <span class="icon">🌥️</span>
+
           <strong>Poca luz</strong>
-          <small>Disminuye la iluminación</small>
+
+          <small>
+            Disminuye la iluminación
+          </small>
+
         </div>
 
+
         <div class="step">
+
           <span class="icon">🔎</span>
+
           <strong>Detección</strong>
-          <small>El sistema detecta la condición</small>
+
+          <small>
+            El sistema detecta la condición
+          </small>
+
         </div>
 
+
         <div class="step">
+
           <span class="icon">💡</span>
+
           <strong>Alerta visual</strong>
-          <small>Se enciende la luz</small>
+
+          <small>
+            Se enciende la luz
+          </small>
+
         </div>
 
+
         <div class="step">
+
           <span class="icon">🔊</span>
+
           <strong>Alerta sonora</strong>
-          <small>En desarrollo</small>
+
+          <small>
+            En desarrollo
+          </small>
+
         </div>
 
       </div>
+
     </section>
 
 
     <!-- EQUIPO -->
+
     <section>
+
       <h2>👥 Nuestro equipo</h2>
+
 
       <div class="team">
 
+
         <div class="member">
-          <div class="avatar">👩🏻‍💻</div>
-          <h3>Sara Andrade</h3>
+
+          <div class="avatar">
+            👩🏻‍💻
+          </div>
+
+          <h3>
+            Sara Andrade
+          </h3>
+
           <p class="role">
             Prompt Engineering · Documento · Infografía
           </p>
+
         </div>
 
+
         <div class="member">
-          <div class="avatar">👩🏼‍💻</div>
-          <h3>Cécile Durand</h3>
+
+          <div class="avatar">
+            👩🏼‍💻
+          </div>
+
+          <h3>
+            Cécile Durand
+          </h3>
+
           <p class="role">
             Organización del podcast · Documento
           </p>
+
         </div>
 
+
         <div class="member">
-          <div class="avatar">👨🏽‍💻</div>
-          <h3>Victor Mazariegos</h3>
+
+          <div class="avatar">
+            👨🏽‍💻
+          </div>
+
+          <h3>
+            Victor Mazariegos
+          </h3>
+
           <p class="role">
             Circuito · ODS
           </p>
+
         </div>
 
       </div>
+
     </section>
 
 
     <!-- FUNCIONAMIENTO -->
+
     <section>
+
       <h2>⚙️ ¿Cómo funciona?</h2>
 
+
       <ol>
-        <li>El sistema detecta el nivel de iluminación.</li>
-        <li>Comprueba que la condición de poca luz permanezca durante un tiempo determinado.</li>
-        <li>Se activa la luz de alerta en el tablero.</li>
-        <li>La alerta sonora se encuentra en proceso de implementación.</li>
-        <li>El aviso permite al personal estar atento y tomar las precauciones correspondientes.</li>
+
+        <li>
+          El sistema detecta el nivel de iluminación.
+        </li>
+
+        <li>
+          Comprueba que la condición de poca luz permanezca durante un tiempo determinado.
+        </li>
+
+        <li>
+          Se activa la luz de alerta en el tablero.
+        </li>
+
+        <li>
+          La alerta sonora se encuentra en proceso de implementación.
+        </li>
+
+        <li>
+          El aviso permite al personal estar atento y tomar las precauciones correspondientes.
+        </li>
+
       </ol>
+
     </section>
 
 
     <!-- ESTADO -->
+
     <section>
+
       <h2>🟡 Estado del sistema</h2>
 
       <p>
         <strong>FUNCIONAMIENTO PARCIAL</strong>
       </p>
 
+
       <div class="status">
 
+
         <div class="status-box working">
-          <h3>✓ Funcionando</h3>
+
+          <h3>
+            ✓ Funcionando
+          </h3>
+
           <p>
             Detección de baja iluminación y activación de la luz de alerta.
           </p>
+
         </div>
 
+
         <div class="status-box pending">
-          <h3>⏳ En desarrollo</h3>
+
+          <h3>
+            ⏳ En desarrollo
+          </h3>
+
           <p>
             Generación del sonido de alerta.
           </p>
+
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ODS -->
+
     <section class="ods">
+
       <h2>🌎 ODS impactado</h2>
 
-      <div class="ods-number">11</div>
 
-      <h3>Ciudades y comunidades sostenibles</h3>
+      <div class="ods-number">
+        11
+      </div>
+
+
+      <h3>
+        Ciudades y comunidades sostenibles
+      </h3>
+
 
       <p>
         Nuestro proyecto busca contribuir a un espacio recreativo más preparado
@@ -462,94 +619,193 @@
         sonora al personal.
       </p>
 
+
       <div style="clear: both;"></div>
+
     </section>
 
 
     <!-- MATERIALES -->
+
     <section>
+
       <h2>🔧 Materiales técnicos</h2>
+
 
       <p>
         Los componentes serán agregados después de verificar el circuito
         desarrollado en Tinkercad.
       </p>
 
+
       <div class="materials">
 
+
         <div class="material">
+
           🔧<br>
-          <strong>[COMPONENTE 1]</strong>
+
+          <strong>
+            [COMPONENTE 1]
+          </strong>
+
         </div>
 
+
         <div class="material">
+
           ⚡<br>
-          <strong>[COMPONENTE 2]</strong>
+
+          <strong>
+            [COMPONENTE 2]
+          </strong>
+
         </div>
 
+
         <div class="material">
+
           💡<br>
-          <strong>[COMPONENTE 3]</strong>
+
+          <strong>
+            [COMPONENTE 3]
+          </strong>
+
         </div>
+
 
       </div>
+
     </section>
 
 
-    <!-- TINKERCAD -->
+    <!-- PROTOTIPO Y VIDEO -->
+
     <section>
+
       <h2>🖥️ Prototipo</h2>
+
 
       <p>
         Circuito desarrollado y simulado en Tinkercad.
+        En el siguiente video se muestra el funcionamiento del prototipo.
       </p>
 
+
+      <!-- VIDEO -->
+
+      <div class="video-container">
+
+        <video controls>
+
+          <source
+            src="WhatsApp Video 2026-09-09 at 9.05.26 PM.mp4"
+            type="video/mp4"
+          >
+
+          Tu navegador no puede reproducir este video.
+
+        </video>
+
+
+        <p class="video-caption">
+          🎥 Video demostrativo del circuito ClimaGuard
+        </p>
+
+      </div>
+
+
+      <!-- ESPACIO PARA CAPTURA DE TINKERCAD -->
+
       <div class="placeholder">
+
         <strong>
           [ESPACIO PARA LA CAPTURA DEL CIRCUITO DE TINKERCAD]
         </strong>
+
       </div>
+
     </section>
 
 
     <!-- RECURSOS -->
+
     <section>
+
       <h2>📚 Recursos del proyecto</h2>
+
 
       <div class="resources">
 
-        <div class="resource">
-          <h3>💻 Investigación formal</h3>
-          <a href="#" class="button">
-            Enlace pendiente
-          </a>
-        </div>
+
+        <!-- GITHUB -->
 
         <div class="resource">
-          <h3>🎙️ Podcast</h3>
+
+          <h3>
+            💻 Investigación formal
+          </h3>
+
+
+          <a
+            href="#"
+            class="button"
+          >
+            Enlace pendiente
+          </a>
+
+        </div>
+
+
+        <!-- PODCAST -->
+
+        <div class="resource">
+
+          <h3>
+            🎙️ Podcast
+          </h3>
+
+
           <p>
             Presentación y explicación del proyecto.
           </p>
 
-          <a href="#" class="button">
+
+          <a
+            href="#"
+            class="button"
+          >
             Enlace pendiente
           </a>
+
         </div>
 
       </div>
+
     </section>
+
 
   </main>
 
 
+  <!-- PIE DE PÁGINA -->
+
   <footer>
+
     <p>
-      <strong>ClimaGuard</strong> · Proyecto STEAM · IRTRA Petapa
+      <strong>ClimaGuard</strong>
+      · Proyecto STEAM · IRTRA Petapa
     </p>
 
     <p>
       Andrade · Durand · Mazariegos
     </p>
+
+  </footer>
+
+
+</body>
+</html>
   </footer>
 
 </body>
