@@ -19,21 +19,27 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7f4;
-            color: #26352c;
+            background: #f4f7f5;
+            color: #24332d;
             line-height: 1.6;
         }
 
+        /* ---------- HEADER ---------- */
+
         header {
-            min-height: 85vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 60px 20px;
             background:
-                linear-gradient(rgba(20, 45, 32, 0.78), rgba(20, 45, 32, 0.78)),
-                linear-gradient(135deg, #315d42, #7e9f75);
+                linear-gradient(
+                    rgba(20, 48, 39, 0.82),
+                    rgba(20, 48, 39, 0.82)
+                ),
+                url("https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
             color: white;
         }
 
@@ -41,85 +47,75 @@
             max-width: 900px;
         }
 
-        .hero .tag {
-            display: inline-block;
-            padding: 8px 18px;
-            border: 1px solid rgba(255,255,255,0.5);
-            border-radius: 30px;
-            margin-bottom: 25px;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
         .hero h1 {
-            font-size: clamp(55px, 10vw, 110px);
-            letter-spacing: -4px;
-            margin-bottom: 5px;
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
         }
 
         .hero h2 {
-            font-size: clamp(20px, 3vw, 30px);
-            font-weight: normal;
-            margin-bottom: 20px;
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-weight: 400;
+            margin-bottom: 25px;
         }
 
         .hero p {
+            font-size: 1.1rem;
             max-width: 700px;
             margin: auto;
-            font-size: 18px;
             opacity: 0.95;
         }
 
-        .button {
+        .hero-badge {
             display: inline-block;
             margin-top: 30px;
-            padding: 13px 25px;
+            padding: 10px 22px;
+            border: 1px solid rgba(255,255,255,0.5);
             border-radius: 30px;
-            background: white;
-            color: #315d42;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            font-size: 0.95rem;
         }
 
-        .button:hover {
-            transform: translateY(-3px);
-        }
+        /* ---------- NAV ---------- */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 100;
             background: rgba(255,255,255,0.96);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dfe7e2;
         }
 
         nav ul {
-            list-style: none;
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+            padding: 16px;
             flex-wrap: wrap;
-            gap: 8px;
-            padding: 12px;
         }
 
         nav a {
+            color: #244d3d;
             text-decoration: none;
-            color: #315d42;
             font-weight: bold;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 14px;
+            font-size: 0.9rem;
         }
 
         nav a:hover {
-            background: #e7efe8;
+            color: #789b70;
         }
 
+        /* ---------- GENERAL ---------- */
+
         section {
+            padding: 80px 20px;
+        }
+
+        .container {
             max-width: 1100px;
             margin: auto;
-            padding: 80px 25px;
         }
 
         .section-title {
@@ -127,331 +123,407 @@
             margin-bottom: 45px;
         }
 
-        .section-title span {
-            display: block;
-            color: #78966f;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
         .section-title h2 {
-            font-size: 38px;
-            color: #284a34;
+            font-size: 2.3rem;
+            color: #234d3b;
+            margin-bottom: 10px;
         }
 
-        .intro-box {
+        .section-title p {
+            color: #68756f;
+        }
+
+        /* ---------- CARDS ---------- */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
             background: white;
-            border-radius: 22px;
-            padding: 35px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-            max-width: 900px;
-            margin: auto;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(30, 55, 45, 0.08);
+            border: 1px solid #e1e9e4;
         }
 
-        .intro-box p {
+        .card h3 {
+            color: #315d48;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #5d6a64;
+        }
+
+        /* ---------- RETO ---------- */
+
+        .problem {
+            background: #e9f0eb;
+        }
+
+        .problem-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(30, 55, 45, 0.08);
+        }
+
+        .problem-box .icon {
+            font-size: 3rem;
             margin-bottom: 15px;
         }
 
-        .highlight {
-            border-left: 5px solid #78966f;
-            padding-left: 20px;
-            margin-top: 25px;
-            font-weight: bold;
+        /* ---------- SOLUTION ---------- */
+
+        .solution {
+            background: white;
         }
 
         .flow {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 15px;
+            margin-top: 40px;
         }
 
         .flow-card {
-            background: white;
-            border-radius: 18px;
             padding: 25px 15px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            position: relative;
+            border-radius: 16px;
+            background: #f2f6f3;
+            border: 1px solid #dce7e0;
         }
 
-        .flow-card:not(:last-child)::after {
-            content: "→";
-            position: absolute;
-            right: -17px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: #78966f;
-            z-index: 2;
+        .flow-card .number {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            background: #315d48;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
         }
 
-        .flow-icon {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        .flow-card h3 {
-            color: #315d42;
-            font-size: 17px;
-            margin-bottom: 8px;
+        .flow-card h4 {
+            margin-bottom: 7px;
+            color: #315d48;
         }
 
         .flow-card p {
-            font-size: 13px;
+            font-size: 0.9rem;
+            color: #66736c;
         }
 
+        .development {
+            border: 2px dashed #c7d3cb;
+            background: #fafcfb;
+        }
+
+        /* ---------- TEAM ---------- */
+
         .team {
+            background: #f4f7f5;
+        }
+
+        .team-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .person {
+        .member {
             background: white;
-            border-radius: 22px;
             padding: 30px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            border-radius: 20px;
+            border: 1px solid #e1e9e4;
+            box-shadow: 0 8px 25px rgba(30,55,45,0.06);
         }
 
         .avatar {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
             border-radius: 50%;
-            margin: 0 auto 18px;
+            background: #dce8df;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 45px;
-            background: #e5eee6;
+            font-size: 3rem;
         }
 
-        .person h3 {
-            color: #284a34;
+        .member h3 {
+            color: #315d48;
             margin-bottom: 8px;
         }
 
-        .person p {
-            font-size: 14px;
+        .member p {
+            color: #69756f;
+            font-size: 0.95rem;
         }
 
-        .function-grid {
+        /* ---------- FUNCTION ---------- */
+
+        .function-section {
+            background: white;
+        }
+
+        .function-text {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+
+        /* ---------- STATUS ---------- */
+
+        .status {
+            background: #e9f0eb;
+        }
+
+        .status-box {
+            max-width: 900px;
+            margin: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
         }
 
-        .info-card {
-            background: white;
-            border-radius: 20px;
+        .status-card {
             padding: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            background: white;
+            border-radius: 18px;
+            border: 1px solid #dfe8e2;
         }
 
-        .info-card h3 {
-            color: #315d42;
-            margin-bottom: 12px;
+        .status-card h3 {
+            margin-bottom: 10px;
         }
 
-        .status {
-            background: #fff;
-            border-radius: 25px;
-            padding: 40px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
-            text-align: center;
-            max-width: 850px;
-            margin: auto;
+        .working {
+            border-left: 6px solid #5c8b68;
         }
 
-        .status-badge {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 25px;
-            background: #f1df91;
-            color: #665719;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .working h3 {
+            color: #467452;
         }
 
-        .status-list {
-            text-align: left;
-            max-width: 650px;
-            margin: 25px auto 0;
+        .progress {
+            border-left: 6px solid #c5a44c;
         }
 
-        .status-list p {
-            margin: 12px 0;
+        .progress h3 {
+            color: #987c29;
         }
+
+        /* ---------- ODS ---------- */
 
         .ods {
-            background: #e7efe8;
-            border-radius: 25px;
-            padding: 45px;
+            background: white;
+        }
+
+        .ods-box {
+            max-width: 900px;
+            margin: auto;
             display: grid;
-            grid-template-columns: 170px 1fr;
+            grid-template-columns: 180px 1fr;
             gap: 35px;
             align-items: center;
+            background: #f4f7f5;
+            padding: 35px;
+            border-radius: 20px;
         }
 
         .ods-number {
             width: 150px;
             height: 150px;
-            background: #315d42;
-            color: white;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            background: #f3b51b;
+            color: white;
+            border-radius: 18px;
             font-weight: bold;
-            border-radius: 20px;
         }
 
+        .ods-number span {
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+        .ods-box h3 {
+            color: #315d48;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- MATERIALS ---------- */
+
         .materials {
+            background: #f4f7f5;
+        }
+
+        .materials-list {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
         }
 
         .material {
             background: white;
-            padding: 22px;
-            border-radius: 17px;
-            text-align: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            padding: 18px 22px;
+            border-radius: 12px;
+            border: 1px solid #e0e8e2;
         }
 
-        .material-icon {
-            font-size: 32px;
-            margin-bottom: 8px;
+        .material strong {
+            color: #315d48;
         }
+
+        /* ---------- PROTOTYPE ---------- */
 
         .prototype {
             background: white;
-            border-radius: 25px;
-            padding: 30px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
-            text-align: center;
         }
 
-        .prototype img {
-            width: 100%;
-            max-width: 900px;
-            border-radius: 18px;
-            margin: 10px auto 25px;
-            display: block;
+        .prototype-image {
+            max-width: 950px;
+            margin: 0 auto 35px;
+            background: #f3f6f4;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #dfe7e2;
         }
+
+        .prototype-image img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .prototype-image p {
+            margin-top: 15px;
+            color: #69756f;
+            font-size: 0.9rem;
+        }
+
+        /* ---------- VIDEO ---------- */
 
         .video-container {
             max-width: 900px;
-            margin: 30px auto 0;
+            margin: 0 auto;
+            background: #f3f6f4;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #dfe7e2;
         }
 
-        video {
+        .video-container video {
             width: 100%;
-            border-radius: 18px;
             display: block;
-            background: #17251c;
+            border-radius: 12px;
         }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 15px;
+            color: #69756f;
+        }
+
+        /* ---------- RESOURCES ---------- */
 
         .resources {
+            background: #e9f0eb;
+        }
+
+        .resource-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
-        .resource-card {
+        .resource {
+            display: flex;
+            align-items: center;
+            gap: 20px;
             background: white;
-            border-radius: 20px;
-            padding: 30px;
+            padding: 25px;
+            border-radius: 18px;
             text-decoration: none;
-            color: #26352c;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            transition: 0.3s;
-            display: block;
+            color: #24332d;
+            border: 1px solid #dfe7e2;
+            transition: 0.2s ease;
         }
 
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+        .resource:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(30,55,45,0.1);
         }
 
         .resource-icon {
-            font-size: 40px;
-            margin-bottom: 12px;
+            font-size: 2.5rem;
         }
 
-        .resource-card h3 {
-            color: #315d42;
-            margin-bottom: 8px;
+        .resource h3 {
+            color: #315d48;
+            margin-bottom: 5px;
         }
 
-        .resource-card p {
-            font-size: 14px;
-            margin-bottom: 15px;
+        .resource p {
+            font-size: 0.9rem;
+            color: #6b7771;
         }
 
-        .resource-link {
-            color: #6d8c65;
-            font-weight: bold;
-        }
+        /* ---------- FOOTER ---------- */
 
         footer {
-            background: #20372a;
+            background: #19382d;
             color: white;
             text-align: center;
             padding: 45px 20px;
         }
 
         footer h2 {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         footer p {
             opacity: 0.8;
-            font-size: 14px;
         }
 
-        .back-top {
-            display: inline-block;
-            margin-top: 20px;
-            color: white;
-            text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.4);
-            padding: 8px 16px;
-            border-radius: 20px;
-        }
+        /* ---------- RESPONSIVE ---------- */
 
-        @media (max-width: 900px) {
+        @media (max-width: 850px) {
+
+            .grid,
+            .status-box,
+            .resource-grid,
+            .materials-list {
+                grid-template-columns: 1fr;
+            }
 
             .flow {
                 grid-template-columns: 1fr;
             }
 
-            .flow-card:not(:last-child)::after {
-                content: "↓";
-                right: 50%;
-                top: auto;
-                bottom: -27px;
-                transform: translateX(50%);
-            }
-
-            .team,
-            .resources {
+            .team-grid {
                 grid-template-columns: 1fr;
             }
 
-            .materials {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .function-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ods {
+            .ods-box {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
@@ -459,71 +531,59 @@
             .ods-number {
                 margin: auto;
             }
+
+            nav ul {
+                gap: 15px;
+            }
         }
 
-        @media (max-width: 550px) {
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
+        @media (max-width: 500px) {
 
             section {
-                padding: 60px 18px;
+                padding: 60px 15px;
             }
 
-            .materials {
-                grid-template-columns: 1fr;
+            .hero h1 {
+                font-size: 3.5rem;
             }
 
-            .intro-box,
-            .status,
-            .ods,
-            .prototype {
+            .problem-box,
+            .card,
+            .status-card {
                 padding: 25px;
-            }
-
-            nav a {
-                font-size: 12px;
-                padding: 6px 8px;
             }
         }
     </style>
 </head>
 
-<body id="inicio">
+<body>
 
-    <!-- =========================
-         PORTADA
-    ========================== -->
+    <!-- ================= HEADER ================= -->
 
     <header>
         <div class="hero">
 
-            <div class="tag">
-                PROYECTO STEAM · IRTRA PETAPA
+            <div class="hero-badge">
+                Proyecto STEAM
             </div>
 
             <h1>ClimaGuard</h1>
 
-            <h2>Sistema de alerta preventiva por baja iluminación</h2>
+            <h2>
+                Sistema de alerta preventiva por baja iluminación
+            </h2>
 
             <p>
-                Una propuesta tecnológica diseñada para detectar períodos
-                prolongados de baja iluminación y generar una alerta preventiva
-                mediante un sistema electrónico.
+                Propuesta tecnológica desarrollada para IRTRA Petapa,
+                utilizando sensores y Arduino para detectar condiciones
+                de baja iluminación y generar una alerta preventiva.
             </p>
-
-            <a href="#solucion" class="button">
-                Conocer el proyecto ↓
-            </a>
 
         </div>
     </header>
 
 
-    <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
+    <!-- ================= NAVIGATION ================= -->
 
     <nav>
         <ul>
@@ -531,316 +591,39 @@
             <li><a href="#solucion">Solución</a></li>
             <li><a href="#equipo">Equipo</a></li>
             <li><a href="#funcionamiento">Funcionamiento</a></li>
-            <li><a href="#estado">Estado</a></li>
-            <li><a href="#ods">ODS</a></li>
-            <li><a href="#materiales">Materiales</a></li>
             <li><a href="#prototipo">Prototipo</a></li>
             <li><a href="#recursos">Recursos</a></li>
         </ul>
     </nav>
 
 
-    <!-- =========================
-         EL RETO
-    ========================== -->
+    <!-- ================= RETO ================= -->
 
-    <section id="reto">
+    <section id="reto" class="problem">
 
-        <div class="section-title">
-            <span>01 · Contexto</span>
-            <h2>El reto</h2>
-        </div>
+        <div class="container">
 
-        <div class="intro-box">
-
-            <p>
-                En un espacio recreativo como IRTRA Petapa, las condiciones
-                ambientales pueden cambiar durante el desarrollo de las
-                actividades. Una disminución prolongada de la iluminación
-                puede ser una señal para prestar mayor atención a las
-                condiciones del entorno.
-            </p>
-
-            <p>
-                A partir de esta necesidad se planteó desarrollar una
-                solución tecnológica capaz de detectar una disminución
-                significativa de luz y generar una señal de alerta.
-            </p>
-
-            <div class="highlight">
-                El objetivo de ClimaGuard es apoyar la prevención mediante
-                una detección sencilla, visual y automatizada.
+            <div class="section-title">
+                <h2>⚠️ El reto</h2>
+                <p>Una necesidad identificada en un espacio recreativo</p>
             </div>
 
-        </div>
+            <div class="problem-box">
 
-    </section>
-
-
-    <!-- =========================
-         SOLUCIÓN
-    ========================== -->
-
-    <section id="solucion">
-
-        <div class="section-title">
-            <span>02 · Propuesta</span>
-            <h2>Nuestra solución</h2>
-        </div>
-
-        <div class="intro-box">
-
-            <p>
-                ClimaGuard utiliza un sensor de luz para identificar cuándo
-                existe poca iluminación durante un período prolongado.
-            </p>
-
-            <p>
-                Cuando se alcanza la condición establecida en el sistema,
-                Arduino procesa la información y activa una señal visual.
-                También se planteó una alerta sonora como parte del sistema.
-            </p>
-
-        </div>
-
-        <br><br>
-
-        <div class="flow">
-
-            <div class="flow-card">
-                <div class="flow-icon">☀️</div>
-                <h3>Luz normal</h3>
-                <p>El sensor recibe suficiente iluminación.</p>
-            </div>
-
-            <div class="flow-card">
-                <div class="flow-icon">🌥️</div>
-                <h3>Poca luz</h3>
-                <p>La iluminación disminuye.</p>
-            </div>
-
-            <div class="flow-card">
-                <div class="flow-icon">📡</div>
-                <h3>Detección</h3>
-                <p>El LDR registra la condición de luz.</p>
-            </div>
-
-            <div class="flow-card">
-                <div class="flow-icon">🔴</div>
-                <h3>Alerta visual</h3>
-                <p>Se activa la señal luminosa del tablero.</p>
-            </div>
-
-            <div class="flow-card">
-                <div class="flow-icon">🔊</div>
-                <h3>Alerta sonora</h3>
-                <p>Función sonora actualmente en desarrollo.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         EQUIPO
-    ========================== -->
-
-    <section id="equipo">
-
-        <div class="section-title">
-            <span>03 · Trabajo colaborativo</span>
-            <h2>Nuestro equipo</h2>
-        </div>
-
-        <div class="team">
-
-            <div class="person">
-
-                <div class="avatar">👩🏻‍💻</div>
-
-                <h3>Sara Andrade</h3>
+                <div class="icon">🌥️</div>
 
                 <p>
-                    Prompt Engineering, organización del documento
-                    e infografía.
-                </p>
-
-            </div>
-
-
-            <div class="person">
-
-                <div class="avatar">👱🏻‍♀️</div>
-
-                <h3>Cécile Durand</h3>
-
-                <p>
-                    Organización del podcast y apoyo en la
-                    elaboración del documento.
-                </p>
-
-            </div>
-
-
-            <div class="person">
-
-                <div class="avatar">👨🏽‍💻</div>
-
-                <h3>Victor Mazariegos</h3>
-
-                <p>
-                    Diseño y armado del circuito y relación
-                    con el ODS seleccionado.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FUNCIONAMIENTO
-    ========================== -->
-
-    <section id="funcionamiento">
-
-        <div class="section-title">
-            <span>04 · Tecnología</span>
-            <h2>¿Cómo funciona?</h2>
-        </div>
-
-        <div class="function-grid">
-
-            <div class="info-card">
-
-                <h3>1. Detección de luz</h3>
-
-                <p>
-                    La fotorresistencia o LDR responde a la cantidad de
-                    iluminación presente en el entorno.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>2. Procesamiento</h3>
-
-                <p>
-                    Arduino recibe la información del sensor y determina
-                    si se cumple la condición de baja iluminación.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>3. Alerta visual</h3>
-
-                <p>
-                    Cuando se detecta la condición establecida, el sistema
-                    activa una señal luminosa mediante los LEDs.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>4. Alerta sonora</h3>
-
-                <p>
-                    El proyecto contempla una señal sonora mediante un
-                    buzzer. Esta parte todavía se encuentra en desarrollo.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ESTADO
-    ========================== -->
-
-    <section id="estado">
-
-        <div class="section-title">
-            <span>05 · Resultados</span>
-            <h2>Estado del sistema</h2>
-        </div>
-
-        <div class="status">
-
-            <div class="status-badge">
-                🟡 FUNCIONAMIENTO PARCIAL
-            </div>
-
-            <p>
-                El prototipo ha logrado realizar correctamente la detección
-                de baja iluminación y activar la señal luminosa.
-            </p>
-
-            <div class="status-list">
-
-                <p>✅ Detección de iluminación: <strong>FUNCIONA</strong></p>
-
-                <p>✅ Activación de señal luminosa: <strong>FUNCIONA</strong></p>
-
-                <p>🔧 Alerta sonora: <strong>EN DESARROLLO</strong></p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ODS
-    ========================== -->
-
-    <section id="ods">
-
-        <div class="section-title">
-            <span>06 · Sostenibilidad</span>
-            <h2>ODS impactado</h2>
-        </div>
-
-        <div class="ods">
-
-            <div class="ods-number">
-                11
-            </div>
-
-            <div>
-
-                <h2>
-                    Ciudades y comunidades sostenibles
-                </h2>
-
-                <br>
-
-                <p>
-                    ClimaGuard se relaciona con el ODS 11 porque propone
-                    utilizar tecnología para contribuir a un entorno
-                    recreativo más preparado y seguro.
+                    En un espacio recreativo como IRTRA Petapa,
+                    los cambios en las condiciones de iluminación
+                    pueden requerir atención oportuna.
                 </p>
 
                 <br>
 
                 <p>
-                    La detección de condiciones de baja iluminación y la
-                    generación de alertas pueden apoyar la prevención y
-                    facilitar una respuesta oportuna ante cambios en
-                    las condiciones del entorno.
+                    El reto consiste en desarrollar un sistema capaz
+                    de detectar cuando la iluminación permanece baja
+                    durante cierto tiempo y generar una señal de alerta.
                 </p>
 
             </div>
@@ -850,65 +633,91 @@
     </section>
 
 
-    <!-- =========================
-         MATERIALES
-    ========================== -->
+    <!-- ================= SOLUTION ================= -->
 
-    <section id="materiales">
+    <section id="solucion" class="solution">
 
-        <div class="section-title">
-            <span>07 · Electrónica</span>
-            <h2>Materiales técnicos</h2>
-        </div>
+        <div class="container">
 
-        <div class="materials">
+            <div class="section-title">
 
-            <div class="material">
-                <div class="material-icon">🟦</div>
-                <strong>Arduino Uno</strong>
-                <p>Control del sistema.</p>
+                <h2>💡 Nuestra solución</h2>
+
+                <p>
+                    ClimaGuard combina sensores, programación y señales
+                    de alerta en un solo sistema.
+                </p>
+
             </div>
 
-            <div class="material">
-                <div class="material-icon">💡</div>
-                <strong>LDR</strong>
-                <p>Detección de iluminación.</p>
-            </div>
 
-            <div class="material">
-                <div class="material-icon">🔴</div>
-                <strong>LEDs</strong>
-                <p>Señal visual.</p>
-            </div>
+            <div class="flow">
 
-            <div class="material">
-                <div class="material-icon">🔊</div>
-                <strong>Buzzer / piezo</strong>
-                <p>Alerta sonora.</p>
-            </div>
+                <div class="flow-card">
 
-            <div class="material">
-                <div class="material-icon">〰️</div>
-                <strong>Resistencias</strong>
-                <p>Control de corriente.</p>
-            </div>
+                    <div class="number">1</div>
 
-            <div class="material">
-                <div class="material-icon">⬜</div>
-                <strong>Protoboard</strong>
-                <p>Montaje del circuito.</p>
-            </div>
+                    <h4>Luz normal</h4>
 
-            <div class="material">
-                <div class="material-icon">🔘</div>
-                <strong>Pushbutton</strong>
-                <p>Elemento de control.</p>
-            </div>
+                    <p>
+                        El sensor recibe suficiente iluminación.
+                    </p>
 
-            <div class="material">
-                <div class="material-icon">🔌</div>
-                <strong>Cables jumper</strong>
-                <p>Conexiones eléctricas.</p>
+                </div>
+
+
+                <div class="flow-card">
+
+                    <div class="number">2</div>
+
+                    <h4>Poca luz</h4>
+
+                    <p>
+                        La iluminación disminuye durante un período.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-card">
+
+                    <div class="number">3</div>
+
+                    <h4>Detección</h4>
+
+                    <p>
+                        El LDR detecta el cambio de iluminación.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-card">
+
+                    <div class="number">4</div>
+
+                    <h4>Alerta visual</h4>
+
+                    <p>
+                        Se activa el indicador luminoso del sistema.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-card development">
+
+                    <div class="number">5</div>
+
+                    <h4>Alerta sonora</h4>
+
+                    <p>
+                        Función en desarrollo para generar
+                        un sonido de alerta.
+                    </p>
+
+                </div>
+
             </div>
 
         </div>
@@ -916,65 +725,372 @@
     </section>
 
 
-    <!-- =========================
-         PROTOTIPO
-    ========================== -->
+    <!-- ================= TEAM ================= -->
 
-    <section id="prototipo">
+    <section id="equipo" class="team">
 
-        <div class="section-title">
-            <span>08 · Prototipo</span>
-            <h2>Así se ve nuestro circuito</h2>
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>👥 Nuestro equipo</h2>
+
+                <p>
+                    Roles principales dentro del desarrollo del proyecto.
+                </p>
+
+            </div>
+
+
+            <div class="team-grid">
+
+                <div class="member">
+
+                    <div class="avatar">
+                        👩🏻‍💻
+                    </div>
+
+                    <h3>Sara Andrade</h3>
+
+                    <p>
+                        Prompt Engineering<br>
+                        Documento e infografía
+                    </p>
+
+                </div>
+
+
+                <div class="member">
+
+                    <div class="avatar">
+                        👩🏼‍🎨
+                    </div>
+
+                    <h3>Cécile Durand</h3>
+
+                    <p>
+                        Organización del podcast<br>
+                        Documento
+                    </p>
+
+                </div>
+
+
+                <div class="member">
+
+                    <div class="avatar">
+                        👨🏽‍🔧
+                    </div>
+
+                    <h3>Victor Mazariegos</h3>
+
+                    <p>
+                        Circuito<br>
+                        ODS
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="prototype">
+    </section>
 
-            <p>
-                Prototipo electrónico de ClimaGuard realizado con Arduino Uno,
-                protoboard, sensor de luz, LEDs, resistencias, buzzer y
-                conexiones mediante cables jumper.
-            </p>
+
+    <!-- ================= FUNCTION ================= -->
+
+    <section id="funcionamiento" class="function-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>⚙️ ¿Cómo funciona?</h2>
+
+            </div>
+
+            <div class="function-text">
+
+                <p>
+                    ClimaGuard utiliza una fotorresistencia o LDR
+                    para detectar cambios en la cantidad de luz.
+                    La señal obtenida es interpretada por un Arduino Uno,
+                    que controla los indicadores del circuito.
+                </p>
+
+                <br>
+
+                <p>
+                    Cuando la iluminación permanece baja según
+                    la condición establecida en la programación,
+                    se activa la alerta visual.
+                    La alerta sonora se encuentra actualmente
+                    en etapa de desarrollo.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATUS ================= -->
+
+    <section class="status">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>🟡 Estado del sistema</h2>
+
+                <p>
+                    Funcionamiento actual del prototipo.
+                </p>
+
+            </div>
+
+
+            <div class="status-box">
+
+                <div class="status-card working">
+
+                    <h3>✓ FUNCIONA</h3>
+
+                    <p>
+                        La detección de baja iluminación funciona
+                        y el sistema activa la señal luminosa
+                        correspondiente.
+                    </p>
+
+                </div>
+
+
+                <div class="status-card progress">
+
+                    <h3>◐ EN DESARROLLO</h3>
+
+                    <p>
+                        La generación del sonido de alerta todavía
+                        está en proceso de implementación.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ODS ================= -->
+
+    <section class="ods">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>🌎 ODS impactado</h2>
+
+            </div>
+
+
+            <div class="ods-box">
+
+                <div class="ods-number">
+
+                    <span>11</span>
+
+                    <small>
+                        CIUDADES Y<br>
+                        COMUNIDADES<br>
+                        SOSTENIBLES
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        ODS 11 — Ciudades y comunidades sostenibles
+                    </h3>
+
+                    <p>
+                        ClimaGuard se relaciona con el ODS 11 porque
+                        busca contribuir a un entorno recreativo más
+                        preparado y seguro mediante el uso de tecnología
+                        para detectar condiciones de baja iluminación
+                        y generar una alerta preventiva.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MATERIALS ================= -->
+
+    <section class="materials">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>🔧 Materiales técnicos</h2>
+
+                <p>
+                    Componentes utilizados en el prototipo.
+                </p>
+
+            </div>
+
+
+            <div class="materials-list">
+
+                <div class="material">
+                    🔲 <strong>Arduino Uno</strong>
+                    — Controlador principal del sistema.
+                </div>
+
+                <div class="material">
+                    💡 <strong>LDR / fotorresistencia</strong>
+                    — Sensor de iluminación.
+                </div>
+
+                <div class="material">
+                    🔴 <strong>LEDs</strong>
+                    — Indicadores luminosos.
+                </div>
+
+                <div class="material">
+                    ▫️ <strong>Resistencias</strong>
+                    — Limitación y control de corriente.
+                </div>
+
+                <div class="material">
+                    🔊 <strong>Buzzer / piezo</strong>
+                    — Elemento destinado a la alerta sonora.
+                </div>
+
+                <div class="material">
+                    ⬜ <strong>Protoboard</strong>
+                    — Base para realizar las conexiones.
+                </div>
+
+                <div class="material">
+                    🔘 <strong>Pushbutton</strong>
+                    — Botón utilizado en el circuito.
+                </div>
+
+                <div class="material">
+                    🔌 <strong>Cables jumper</strong>
+                    — Conexiones entre los componentes.
+                </div>
+
+                <div class="material">
+                    🔗 <strong>Cable USB</strong>
+                    — Conexión del Arduino.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROTOTYPE ================= -->
+
+    <section id="prototipo" class="prototype">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>🖥️ Prototipo</h2>
+
+                <p>
+                    Circuito utilizado para desarrollar y comprobar
+                    el funcionamiento de ClimaGuard.
+                </p>
+
+            </div>
+
 
             <!--
-            IMPORTANTE:
-            Sube la imagen a tu repositorio con el nombre:
+                IMPORTANTE:
+                Guarda la foto real del circuito en el mismo lugar
+                que index.html con el nombre:
 
-            circuito-climaguard.png
+                circuito-climaguard.png
 
+                Si utilizas otro nombre, cambia el src.
             -->
 
-            <img
-                src="circuito-climaguard.png"
-                alt="Circuito electrónico de ClimaGuard"
-            >
+            <div class="prototype-image">
+
+                <img
+                    src="circuito-climaguard.png"
+                    alt="Circuito de ClimaGuard">
+
+                <p>
+                    Prototipo físico/digital del circuito ClimaGuard.
+                </p>
+
+            </div>
 
 
-            <h3>🎥 Video demostrativo del circuito</h3>
+            <!-- ================= VIDEO ================= -->
 
-            <p>
-                En este video se muestra el funcionamiento del prototipo.
-            </p>
+            <div class="section-title">
 
-            <div class="video-container">
+                <h2>🎥 Video demostrativo</h2>
 
-                <!--
+                <p>
+                    Demostración del funcionamiento del circuito.
+                </p>
+
+            </div>
+
+
+            <!--
                 IMPORTANTE:
-                Sube el video a tu repositorio con el nombre:
+                Sube tu video al repositorio con el nombre:
 
                 video-circuito.mp4
-                -->
+
+                y déjalo en la misma carpeta que index.html.
+
+                Si lo colocas dentro de una carpeta llamada videos,
+                cambia el src por:
+                videos/video-circuito.mp4
+            -->
+
+            <div class="video-container">
 
                 <video controls>
 
                     <source
-                        src="WhatsApp Video 2026-09-09 at 9.05.26 PM.mp4"
-                        type="video/mp4"
-                    >
+                        src="video-circuito.mp4"
+                        type="video/mp4">
 
                     Tu navegador no puede reproducir este video.
 
                 </video>
 
+                <p class="video-caption">
+                    🎥 Video demostrativo del circuito ClimaGuard
+                </p>
+
             </div>
 
         </div>
@@ -982,141 +1098,161 @@
     </section>
 
 
-    <!-- =========================
-         RECURSOS
-    ========================== -->
+    <!-- ================= RESOURCES ================= -->
 
-    <section id="recursos">
+    <section id="recursos" class="resources">
 
-        <div class="section-title">
-            <span>09 · Evidencias</span>
-            <h2>Recursos del proyecto</h2>
-        </div>
+        <div class="container">
 
+            <div class="section-title">
 
-        <div class="resources">
-
-
-            <!-- DOCUMENTO -->
-
-            <a
-                href="https://colegiocapouilliez-my.sharepoint.com/:w:/g/personal/a00949-1_capouilliez_edu_gt/IQCD2HIz2AWrS6j5g3RoxJNPAdxMcaTNQ-Bw671rkdfqHW4?e=Xehstk"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-card"
-            >
-
-                <div class="resource-icon">
-                    📄
-                </div>
-
-                <h3>
-                    Documento de investigación
-                </h3>
+                <h2>📚 Recursos del proyecto</h2>
 
                 <p>
-                    Consulta el informe formal de investigación,
-                    fundamentos y desarrollo del proyecto ClimaGuard.
+                    Investigación, podcast y archivos relacionados
+                    con ClimaGuard.
                 </p>
 
-                <span class="resource-link">
-                    Ver documento →
-                </span>
-
-            </a>
+            </div>
 
 
-            <!-- PODCAST -->
-
-            <a
-                href="https://www.canva.com/design/DAHUwvGWBtg/UuXUTMx87Zf5-_qwloi_0w/edit"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-card"
-            >
-
-                <div class="resource-icon">
-                    🎙️
-                </div>
-
-                <h3>
-                    Podcast ClimaGuard
-                </h3>
-
-                <p>
-                    Accede al podcast realizado como parte del
-                    proyecto y conoce nuestra propuesta.
-                </p>
-
-                <span class="resource-link">
-                    Escuchar / ver podcast →
-                </span>
-
-            </a>
+            <div class="resource-grid">
 
 
-            <!-- GITHUB -->
+                <!-- 1. DOCUMENTO WORD -->
 
-            <a
-                href="https://github.com/sasfiaap/ProyectoFinalTICS_Andrade_Durand_Mazariegos_11B_ClimateGuard"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-card"
-            >
+                <a
+                    class="resource"
+                    href="https://colegiocapouilliez-my.sharepoint.com/:w:/g/personal/a00949-1_capouilliez_edu_gt/IQCD2HIz2AWrS6j5g3RoxJNPAdxMcaTNQ-Bw671rkdfqHW4?e=Xehstk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                <div class="resource-icon">
-                    💻
-                </div>
+                    <div class="resource-icon">
+                        📄
+                    </div>
 
-                <h3>
-                    GitHub del proyecto
-                </h3>
+                    <div>
 
-                <p>
-                    Consulta los archivos, recursos y materiales
-                    digitales relacionados con ClimaGuard.
-                </p>
+                        <h3>
+                            Documento de investigación
+                        </h3>
 
-                <span class="resource-link">
-                    Ver proyecto en GitHub →
-                </span>
+                        <p>
+                            Consulta el documento formal
+                            de investigación del proyecto.
+                        </p>
 
-            </a>
+                    </div>
+
+                </a>
+
+
+                <!-- 2. PDF -->
+
+                <a
+                    class="resource"
+                    href="Informe_Investigacion_ClimaGuard.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="Informe_Investigacion_ClimaGuard.pdf">
+                        📕
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Investigación en PDF
+                        </h3>
+
+                        <p>
+                            Abre la versión PDF del informe
+                            de investigación.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- 3. PODCAST -->
+
+                <a
+                    class="resource"
+                    href="https://www.canva.com/design/DAHUwvGWBtg/UuXUTMx87Zf5-_qwloi_0w/edit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="resource-icon">
+                        🎙️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Podcast
+                        </h3>
+
+                        <p>
+                            Accede al podcast del proyecto
+                            realizado en Canva.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- 4. GITHUB -->
+
+                <a
+                    class="resource"
+                    href="https://github.com/sasfiaap/ProyectoFinalTICS_Andrade_Durand_Mazariegos_11B_ClimateGuard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="resource-icon">
+                        💻
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            GitHub
+                        </h3>
+
+                        <p>
+                            Consulta los archivos y recursos
+                            del proyecto.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         CIERRE
-    ========================== -->
-
-    <section>
-
-        <div class="intro-box" style="text-align:center;">
-
-            <h2 style="color:#315d42; margin-bottom:15px;">
-                ClimaGuard
-            </h2>
-
-            <p>
-                Tecnología que observa el entorno para apoyar
-                una respuesta más preventiva.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <h2>ClimaGuard</h2>
+
+        <p>
+            Sistema de alerta preventiva por baja iluminación
+        </p>
+
+        <br>
 
         <p>
             Proyecto STEAM · IRTRA Petapa
@@ -1126,11 +1262,8 @@
             Andrade · Durand · Mazariegos
         </p>
 
-        <a href="#inicio" class="back-top">
-            ↑ Volver al inicio
-        </a>
-
     </footer>
+
 
 </body>
 </html>
